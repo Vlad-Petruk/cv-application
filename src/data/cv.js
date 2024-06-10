@@ -1,4 +1,4 @@
-{
+ const data = {
     "personal_info": {
       "name": "Alvaro de Santos",
       "email": "alvarodesants@gmail.com",
@@ -87,3 +87,5 @@
       }
     ]
   }
+
+  export default data
