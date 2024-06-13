@@ -2,12 +2,12 @@
     margin: 0;
     font-size: 30px;
     text-align: center;
-    padding: 1rem 0;
 }
 
 .personal-info {
    background: rgb(72, 65, 46);
-   height: 25vh;
+   height: 15vh;
+   padding: 2rem;
 }
 
 .contact-box {
