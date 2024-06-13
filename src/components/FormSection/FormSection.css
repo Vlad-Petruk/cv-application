@@ -1,0 +1,9 @@
+.main-container {
+    padding: 0 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
