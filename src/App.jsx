@@ -12,7 +12,7 @@ function App() {
         <FormMainSection />
       </div>
       <div className="cv-preview">
-        <CVPreview userFullName = {data.personal_info.name} email = {data.personal_info.email} tel = {data.personal_info.phone} address ={data.personal_info.address}  />
+        <CVPreview userFullName = {data.personal_info.name} email = {data.personal_info.email} tel = {data.personal_info.phone} address ={data.personal_info.address} educations={data.education} experience={data.professional_experience} />
       </div>
       
     </>

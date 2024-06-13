@@ -1,8 +1,51 @@
 .h2 {
     margin: 0;
     font-size: 30px;
+    text-align: center;
+    padding: 1rem 0;
 }
 
 .personal-info {
-   
+   background: rgb(72, 65, 46);
+   height: 25vh;
 }
+
+.contact-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.personal-details-div {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+}
+
+.personal-details-div * {
+    padding: .3rem;
+}
+
+.section-show {
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.title-show {
+    background-color: white;
+    text-align: center;
+    color: #31473A;
+}
+
+.content-show {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 0 2rem;
+}
+
+.content-show p{
+    margin: 0;
+}
+
+
