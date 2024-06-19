@@ -1,6 +1,7 @@
 import FormBox from './FormBox'
 import Button from '../Reusable Componets/Button'
 import './FormSection.css'
+import {mdiAccount, mdiBriefcase, mdiSchool} from '@mdi/js';
 
 function FormMainSection () {
     return (
@@ -11,9 +12,9 @@ function FormMainSection () {
             </div>
             <div className="form-boxes">
                 {/* use State in boxes to define its content showing */}
-                <FormBox />
-                <FormBox />
-                <FormBox />
+                <FormBox boxHeader={'Personal Details'} icon={mdiAccount} />
+                <FormBox boxHeader={'Education'} icon={mdiSchool}/>
+                <FormBox boxHeader={'Experience'} icon={mdiBriefcase}/>
             </div>
         </div>
     )
