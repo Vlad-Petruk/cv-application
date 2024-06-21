@@ -12,9 +12,9 @@ function FormMainSection () {
             </div>
             <div className="form-boxes">
                 {/* use State in boxes to define its content showing */}
-                <FormBox boxHeader={'Personal Details'} icon={mdiAccount} />
+                <FormBox boxHeader={'Personal Details'} box={'personalDetails'} icon={mdiAccount} />
                 <FormBox boxHeader={'Education'} icon={mdiSchool}/>
-                <FormBox boxHeader={'Experience'} icon={mdiBriefcase}/>
+                <FormBox boxHeader={'Experience'}  icon={mdiBriefcase}/>
             </div>
         </div>
     )
