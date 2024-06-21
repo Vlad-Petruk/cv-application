@@ -14,7 +14,28 @@
 
     border: 2px solid rgb(72, 65, 46);
     border-radius: 20px;
-    padding: 1rem;
+    padding: 2rem;
 
     /* margin-top: 1rem; */
+}
+
+.inputBox {
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.inputBox > input {
+    height: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+    background: #464545;
+    text-indent: 10px;
+}
+
+.inputBox > input:focus{
+    outline: 1px solid wheat;
 }
