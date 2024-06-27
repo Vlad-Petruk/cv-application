@@ -22,6 +22,12 @@
     padding-top: 1rem;
 }
 
+.input-box {
+    background: #3a3838;
+    border-radius: 1rem;
+    padding: 5px;
+}
+
 .card-opened {
     display: flex;
     flex-direction: column;
@@ -36,4 +42,9 @@
 .card-opened > :first-child {
     border: none;
     padding: 0;
+}
+
+.edu-btn *{
+    padding: .6rem;
+    margin: .3rem;
 }
