@@ -3,7 +3,7 @@
     border: none;
     padding: 1rem 1.3rem;
     font-size: 1rem;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 .card {
@@ -38,4 +38,13 @@
 
 .inputBox > input:focus{
     outline: 1px solid wheat;
+}
+
+.institution-card {
+    background: rgb(72, 65, 46);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 1rem;
+
+    border-radius: 1rem;
 }
