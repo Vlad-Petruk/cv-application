@@ -37,6 +37,9 @@ function ExperienceInput () {
         
     return (
         <>
+        <div className="add-btn">
+            <Button text={'+ Experience'} />
+        </div>
         {data.professional_experience.map(experience => (
             boxOpened[experience.key] ? (
                 <InputBox key={experience.key} handleClick={handleClickSave}/>

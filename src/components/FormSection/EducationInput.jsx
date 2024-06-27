@@ -36,6 +36,9 @@ function EducationInput () {
         
     return (
         <>
+        <div className="add-btn">
+            <Button text={'+ Education'} />
+        </div>
         {data.education.map(education => (
             boxOpened[education.key] ? (
                 <InputBox key={education.key} handleClick={handleClickSave}/>
