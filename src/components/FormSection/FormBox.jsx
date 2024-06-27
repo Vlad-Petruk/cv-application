@@ -2,6 +2,8 @@ import { useState } from "react"
 import Card from "../Reusable Componets/Card"
 import {mdiChevronLeft, mdiChevronDown} from '@mdi/js';
 import PersonalDetailsInput from "./PersonalDetailsInput";
+import EducationInput from "./EducationInput";
+import ExperienceInput from "./ExperienceInput";
 
 function FormBox ({boxHeader, icon, box}) {
     const [boxOpened, setBoxOpened] = useState(true)
@@ -13,10 +15,10 @@ function FormBox ({boxHeader, icon, box}) {
         switch (box) {
             case 'personalDetails':
                 return <PersonalDetailsInput />;
-            // case 'contactDetails':
-            //     return <ContactDetailsInput />;
-            // case 'addressDetails':
-            //     return <AddressDetailsInput />;
+            case 'education':
+                return <EducationInput />;
+            case 'experience':
+                return <ExperienceInput />;
             default:
                 return null;
         }

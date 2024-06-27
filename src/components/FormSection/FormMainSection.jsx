@@ -13,8 +13,8 @@ function FormMainSection () {
             <div className="form-boxes">
                 {/* use State in boxes to define its content showing */}
                 <FormBox boxHeader={'Personal Details'} box={'personalDetails'} icon={mdiAccount} />
-                <FormBox boxHeader={'Education'} icon={mdiSchool}/>
-                <FormBox boxHeader={'Experience'}  icon={mdiBriefcase}/>
+                <FormBox boxHeader={'Education'} box={'education'} icon={mdiSchool}/>
+                <FormBox boxHeader={'Experience'} box={'experience'} icon={mdiBriefcase}/>
             </div>
         </div>
     )
