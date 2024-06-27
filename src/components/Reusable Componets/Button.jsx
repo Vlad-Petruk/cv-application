@@ -1,8 +1,8 @@
 import './ReusableContent.css'
 
-function Button ({text}) {
+function Button ({text, handleClick}) {
     return (
-        <button type="button" className="btn">{text}</button>
+        <button type="button" className="btn" onClick={handleClick}>{text}</button>
     )
 }
 
