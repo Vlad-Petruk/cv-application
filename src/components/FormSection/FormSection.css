@@ -25,7 +25,7 @@
 .input-box {
     background: #3a3838;
     border-radius: 1rem;
-    padding: 5px;
+    padding: 1rem;
 }
 
 .card-opened {
@@ -45,6 +45,6 @@
 }
 
 .edu-btn *{
-    padding: .6rem;
+    padding: 1rem;
     margin: .3rem;
 }
