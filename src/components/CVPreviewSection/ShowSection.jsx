@@ -6,11 +6,11 @@ import ListExperienceShow from "./ExperienceShow";
 import './ShowSection.css'
 
 
-function CVPreview ({userFullName, email, tel, address, educations, experience}) {
+function CVPreview ({name, email, tel, address, educations, experience}) {
     return (
         <>
         <div className="personal-info">
-            <Header className="header" text={userFullName} level={1}/>
+            <Header className="header" text={name} level={1}/>
             <div className="contact-box">
                 <div className="personal-details-div">
                     <Icon path={mdiEmail} size={1}/>
