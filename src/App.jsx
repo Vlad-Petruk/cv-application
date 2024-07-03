@@ -37,6 +37,14 @@ function App() {
     setEducations(newEducations);
 }
 
+function updateExperience(updatedExperience, company, posTitle, startDate, endDate, location, descr) {
+  let newExperiences = experiences.map(experience =>
+      experience.key === updatedExperience.key 
+          ? { ...experience, company, posTitle, startDate, endDate, location, descr }
+          : experience
+  );
+  setExperiences(newExperiences);
+}
 
   function onClear() {
     setName('')
@@ -60,7 +68,7 @@ function App() {
   return (
     <>
       <div className="form-section">
-        <FormMainSection name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} adress={adress} setAdress={setAdress} onClear={onClear} onLoad={onLoad} educations={educations} addEducation={addEducation} updateEducation={updateEducation}
+        <FormMainSection name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} adress={adress} setAdress={setAdress} onClear={onClear} onLoad={onLoad} educations={educations} addEducation={addEducation} updateEducation={updateEducation} experiences={experiences} updateExperience={updateExperience}
         />
       </div>
       <div className="cv-preview">
