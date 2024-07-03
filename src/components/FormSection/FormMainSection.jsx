@@ -3,7 +3,7 @@ import Button from '../Reusable Componets/Button'
 import './FormSection.css'
 import {mdiAccount, mdiBriefcase, mdiSchool} from '@mdi/js';
 
-function FormMainSection ({name, setName, email, setEmail, phone, setPhone, adress, setAdress, onClear, onLoad}) {
+function FormMainSection ({name, setName, email, setEmail, phone, setPhone, adress, setAdress, onClear, onLoad, educations, addEducation, updateEducation}) {
     return (
         <div className="main-container">
             <div className="buttons">
@@ -13,7 +13,7 @@ function FormMainSection ({name, setName, email, setEmail, phone, setPhone, adre
             <div className="form-boxes">
                 {/* use State in boxes to define its content showing */}
                 <FormBox boxHeader={'Personal Details'} box={'personalDetails'} icon={mdiAccount} name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} adress={adress} setAdress={setAdress}/>
-                <FormBox boxHeader={'Education'} box={'education'} icon={mdiSchool}/>
+                <FormBox boxHeader={'Education'} box={'education'} icon={mdiSchool} educations={educations} addEducation={addEducation} updateEducation={updateEducation} />
                 <FormBox boxHeader={'Experience'} box={'experience'} icon={mdiBriefcase}/>
             </div>
         </div>

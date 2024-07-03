@@ -15,6 +15,29 @@ function App() {
 
   const [experiences, setExperiences] = useState(data.professional_experience);
 
+  function addEducation(school, degree, startDate, endDate, location) {
+    let newEducations = [...educations]
+    newEducations.push({
+      key: uuidv4,
+      school: school,
+      degree: degree,
+      startDate: startDate,
+      endDate: endDate,
+      location: location,
+    })
+    setEducations(newEducations)
+  }
+
+  function updateEducation(updatedEducation, school, degree, startDate, endDate, location) {
+    let newEducations = educations.map(education =>
+        education.key === updatedEducation.key 
+            ? { ...education, school, degree, startDate, endDate, location }
+            : education
+    );
+    setEducations(newEducations);
+}
+
+
   function onClear() {
     setName('')
     setEmail('')
@@ -37,7 +60,8 @@ function App() {
   return (
     <>
       <div className="form-section">
-        <FormMainSection name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} adress={adress} setAdress={setAdress} onClear={onClear} onLoad={onLoad}/>
+        <FormMainSection name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} adress={adress} setAdress={setAdress} onClear={onClear} onLoad={onLoad} educations={educations} addEducation={addEducation} updateEducation={updateEducation}
+        />
       </div>
       <div className="cv-preview">
         <CVPreview name = {name} email = {email} tel = {phone} address ={adress} educations={educations} experience={experiences} />

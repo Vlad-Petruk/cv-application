@@ -5,7 +5,7 @@ import PersonalDetailsInput from "./PersonalDetailsInput";
 import EducationInput from "./EducationInput";
 import ExperienceInput from "./ExperienceInput";
 
-function FormBox ({boxHeader, icon, box, name, setName, email, setEmail, phone, setPhone, adress, setAdress}) {
+function FormBox ({boxHeader, icon, box, name, setName, email, setEmail, phone, setPhone, adress, setAdress, educations, addEducation, updateEducation}) {
     const [boxOpened, setBoxOpened] = useState(true)
     function handleClick (){
         setBoxOpened(prevState => !prevState)
@@ -17,7 +17,7 @@ function FormBox ({boxHeader, icon, box, name, setName, email, setEmail, phone, 
             case 'personalDetails':
                 return <PersonalDetailsInput name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} adress={adress} setAdress={setAdress}/>;
             case 'education':
-                return <EducationInput />;
+                return <EducationInput educations={educations} addEducation={addEducation} updateEducation={updateEducation} />;
             case 'experience':
                 return <ExperienceInput />;
             default:
