@@ -2,8 +2,14 @@ import { useState } from "react";
 import Input from "../Reusable Componets/Input";
 import Button from "../Reusable Componets/Button";
 import InstitutionCard from "../Reusable Componets/InstitutionCard";
+import NewExperienceInput from "./NewExperienceInput";
 // in article Thinking in React are usefull information about passing the data upwards (step 5)
-function InputBox({ handleClick, experience, updateExperience }) {
+function InputBox({
+  handleClick,
+  experience,
+  updateExperience,
+  deleteExperience,
+}) {
   return (
     <div className="input-box">
       <Input
@@ -18,7 +24,7 @@ function InputBox({ handleClick, experience, updateExperience }) {
             experience.startDate,
             experience.endDate,
             experience.location,
-            experience.descr,
+            experience.descr
           );
         }}
       />
@@ -35,7 +41,7 @@ function InputBox({ handleClick, experience, updateExperience }) {
             experience.startDate,
             experience.endDate,
             experience.location,
-            experience.descr,
+            experience.descr
           );
         }}
       />
@@ -52,7 +58,7 @@ function InputBox({ handleClick, experience, updateExperience }) {
             value,
             experience.endDate,
             experience.location,
-            experience.descr,
+            experience.descr
           );
         }}
       />
@@ -69,7 +75,7 @@ function InputBox({ handleClick, experience, updateExperience }) {
             experience.startDate,
             value,
             experience.location,
-            experience.descr,
+            experience.descr
           );
         }}
       />
@@ -86,7 +92,7 @@ function InputBox({ handleClick, experience, updateExperience }) {
             experience.startDate,
             experience.endDate,
             value,
-            experience.descr,
+            experience.descr
           );
         }}
       />
@@ -103,20 +109,27 @@ function InputBox({ handleClick, experience, updateExperience }) {
             experience.startDate,
             experience.endDate,
             experience.location,
-            value,
+            value
           );
         }}
       />
 
       <div className="buttons edu-btn">
+        <Button text={"Delete"} handleClick={deleteExperience} />
         <Button text={"Save"} handleClick={handleClick} />
       </div>
     </div>
   );
 }
 
-function ExperienceInput({ experiences, updateExperience }) {
+function ExperienceInput({
+  experiences,
+  updateExperience,
+  addExperience,
+  deleteExperience,
+}) {
   const [boxOpened, setBoxOpened] = useState(false);
+  const [newInput, setNewInput] = useState(false);
   function handleClick(id) {
     setBoxOpened((prevState) => ({
       ...prevState,
@@ -131,8 +144,14 @@ function ExperienceInput({ experiences, updateExperience }) {
   return (
     <>
       <div className="add-btn">
-        <Button text={"+ Experience"} />
+        <Button text={"+ Experience"} handleClick={setNewInput} />
       </div>
+      {newInput && (
+        <NewExperienceInput
+          addExperience={addExperience}
+          handleStateClick={setNewInput}
+        />
+      )}
       {experiences.map((experience) =>
         boxOpened[experience.key] ? (
           <InputBox
@@ -145,7 +164,7 @@ function ExperienceInput({ experiences, updateExperience }) {
               startDate,
               endDate,
               location,
-              descr,
+              descr
             ) =>
               updateExperience(
                 experience,
@@ -154,9 +173,10 @@ function ExperienceInput({ experiences, updateExperience }) {
                 startDate,
                 endDate,
                 location,
-                descr,
+                descr
               )
             }
+            deleteExperience={() => deleteExperience(experience)}
           />
         ) : (
           <InstitutionCard
@@ -164,7 +184,7 @@ function ExperienceInput({ experiences, updateExperience }) {
             text={experience.company}
             handleClick={() => handleClick(experience.key)}
           />
-        ),
+        )
       )}
     </>
   );

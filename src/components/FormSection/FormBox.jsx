@@ -24,13 +24,13 @@ function FormBox({
   experiences,
   addExperience,
   updateExperience,
+  deleteExperience,
 }) {
   const [boxOpened, setBoxOpened] = useState(true);
   function handleClick() {
     setBoxOpened((prevState) => !prevState);
   }
 
-  //need pass data here from sections then pass it forward to form main section, and theen pass it to app.jsx and create state there(one state for two parts of program)
   function renderBoxContent() {
     switch (box) {
       case "personalDetails":
@@ -61,6 +61,7 @@ function FormBox({
             experiences={experiences}
             addExperience={addExperience}
             updateExperience={updateExperience}
+            deleteExperience={deleteExperience}
           />
         );
       default:

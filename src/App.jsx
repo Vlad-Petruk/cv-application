@@ -39,12 +39,12 @@ function App() {
     degree,
     startDate,
     endDate,
-    location,
+    location
   ) {
     let newEducations = educations.map((education) =>
       education.key === updatedEducation.key
         ? { ...education, school, degree, startDate, endDate, location }
-        : education,
+        : education
     );
     setEducations(newEducations);
   }
@@ -55,7 +55,7 @@ function App() {
     startDate,
     endDate,
     location,
-    descr,
+    descr
   ) {
     let newExperiences = [...experiences];
     newExperiences.push({
@@ -70,6 +70,13 @@ function App() {
     setExperiences(newExperiences);
   }
 
+  function deleteExperience(experience) {
+    let newExperiences = experiences.filter(
+      (exp) => exp.key !== experience.key
+    );
+    setExperiences(newExperiences);
+  }
+
   function updateExperience(
     updatedExperience,
     company,
@@ -77,7 +84,7 @@ function App() {
     startDate,
     endDate,
     location,
-    descr,
+    descr
   ) {
     let newExperiences = experiences.map((experience) =>
       experience.key === updatedExperience.key
@@ -90,7 +97,7 @@ function App() {
             location,
             descr,
           }
-        : experience,
+        : experience
     );
     setExperiences(newExperiences);
   }
@@ -134,6 +141,7 @@ function App() {
           experiences={experiences}
           addExperience={addExperience}
           updateExperience={updateExperience}
+          deleteExperience={deleteExperience}
         />
       </div>
       <div className="cv-preview">

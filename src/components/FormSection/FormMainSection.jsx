@@ -21,6 +21,7 @@ function FormMainSection({
   deleteEducation,
   addExperience,
   updateExperience,
+  deleteExperience,
 }) {
   return (
     <div className="main-container">
@@ -61,6 +62,7 @@ function FormMainSection({
           experiences={experiences}
           addExperience={addExperience}
           updateExperience={updateExperience}
+          deleteExperience={deleteExperience}
         />
       </div>
     </div>
