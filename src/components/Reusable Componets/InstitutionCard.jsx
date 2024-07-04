@@ -1,9 +1,9 @@
-function InstitutionCard ({text, handleClick}) {
-    return (
-        <div className="institution-card" onClick={handleClick}>
-            {text}
-        </div>
-    )
+function InstitutionCard({ text, handleClick }) {
+  return (
+    <div className="institution-card" onClick={handleClick}>
+      {text}
+    </div>
+  );
 }
 
-export default InstitutionCard
+export default InstitutionCard;

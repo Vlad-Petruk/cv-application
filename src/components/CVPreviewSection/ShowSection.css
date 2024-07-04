@@ -1,51 +1,49 @@
 .header {
-    margin: 0;
-    font-size: 35px;
-    text-align: center;
+  margin: 0;
+  font-size: 35px;
+  text-align: center;
 }
 
 .personal-info {
-   background: rgb(72, 65, 46);
-   height: 15vh;
-   padding: 2rem;
+  background: rgb(72, 65, 46);
+  height: 15vh;
+  padding: 2rem;
 }
 
 .contact-box {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .personal-details-div {
-    display: flex;
-    align-items: center;
-    padding: .5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
 }
 
 .personal-details-div * {
-    padding: .3rem;
+  padding: 0.3rem;
 }
 
 .section-show {
-    gap: 1em;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
 }
 
 .title-show {
-    background-color: white;
-    text-align: center;
-    color: #31473A;
+  background-color: white;
+  text-align: center;
+  color: #31473a;
 }
 
 .content-show {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 0 2rem;
 }
 
-.content-show p{
-    margin: 0;
+.content-show p {
+  margin: 0;
 }
-
-

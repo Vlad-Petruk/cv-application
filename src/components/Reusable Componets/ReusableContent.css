@@ -1,50 +1,49 @@
 .btn {
-    background: rgb(72, 65, 46);
-    border: none;
-    padding: 1rem 1.3rem;
-    font-size: 1rem;
-    border-radius: 1rem;
+  background: rgb(72, 65, 46);
+  border: none;
+  padding: 1rem 1.3rem;
+  font-size: 1rem;
+  border-radius: 1rem;
 }
 
 .card {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
 
-    border: 2px solid rgb(72, 65, 46);
-    border-radius: 20px;
-    padding: 2rem;
+  border: 2px solid rgb(72, 65, 46);
+  border-radius: 20px;
+  padding: 2rem;
 
-    /* margin-top: 1rem; */
+  /* margin-top: 1rem; */
 }
 
 .inputBox {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
 }
 
 .inputBox > input {
-    height: 1.5rem;
-    border-radius: 10px;
-    border: none;
-    margin-top: 5px;
-    background: #242424;
-    text-indent: 10px;
+  height: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  margin-top: 5px;
+  background: #242424;
+  text-indent: 10px;
 }
 
-.inputBox > input:focus{
-    outline: 1px solid wheat;
+.inputBox > input:focus {
+  outline: 1px solid wheat;
 }
 
 .institution-card {
-    background: rgb(72, 65, 46);
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 1rem;
+  background: rgb(72, 65, 46);
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 1rem;
 
-    border-radius: 1rem;
+  border-radius: 1rem;
 }

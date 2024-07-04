@@ -5,13 +5,11 @@
   display: grid;
   grid-template-columns: 2fr 3fr;
   padding: 0 10vw;
-  
+
   min-width: 320px;
   min-height: 100vh;
-  
 }
 
 .cv-preview {
   border: 1px solid rgb(72, 65, 46);
 }
-
