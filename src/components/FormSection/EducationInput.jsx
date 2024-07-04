@@ -2,8 +2,9 @@ import { useState } from "react";
 import Input from "../Reusable Componets/Input";
 import Button from "../Reusable Componets/Button";
 import InstitutionCard from "../Reusable Componets/InstitutionCard";
+import NewEducationInput from "./NewEducationInput";
 
-function InputBox ({handleClick, education, updateEducation}) {
+function InputBox ({handleClick, deleteEducation, education, updateEducation}) {
     return (
         <div className="input-box">
             <Input type={'text'} id ={'school'} label={'School'} value={education.school} onChange={(value) => {updateEducation(value, education.degree, education.startDate, education.endDate, education.location)}}/>
@@ -17,14 +18,16 @@ function InputBox ({handleClick, education, updateEducation}) {
             <Input type={'text'} id ={'location'} label={'Location'} value={education.location}onChange={(value) => updateEducation(education.school, education.degree, education.startDate, education.endDate, value)}/>
 
             <div className="buttons edu-btn">
+                <Button text={'Delete'} handleClick={deleteEducation} />
                 <Button text={'Save'} handleClick={handleClick}/>
             </div>
         </div>
     )
 }
 
-function EducationInput ({educations, updateEducation}) {
-    const [boxOpened, setBoxOpened] = useState(false)
+function EducationInput ({educations, addEducation, updateEducation, deleteEducation}) {
+    const [boxOpened, setBoxOpened] = useState(false);
+    const [newInput, setNewInput] = useState(false)
     function handleClick (id){
         setBoxOpened(prevState => ({
             ...prevState,
@@ -40,11 +43,12 @@ function EducationInput ({educations, updateEducation}) {
     return (
         <>
         <div className="add-btn">
-            <Button text={'+ Education'} />
+            <Button text={'+ Education'} handleClick={setNewInput}/>
         </div>
+        {newInput&& <NewEducationInput addEducation={addEducation} handleStateClick={setNewInput}/>}
         {educations.map(education => (
             boxOpened[education.key] ? (
-                <InputBox key={education.key} handleClick={handleClickSave} education={education} updateEducation={(school, degree, startDate, endDate, location) => updateEducation(education, school, degree, startDate, endDate, location)} />
+                <InputBox key={education.key} handleClick={handleClickSave} education={education} updateEducation={(school, degree, startDate, endDate, location) => updateEducation(education, school, degree, startDate, endDate, location)} deleteEducation={() => deleteEducation(education)} />
             ) : (
                 <InstitutionCard key={education.key} text={education.school} handleClick={() => handleClick(education.key)}/>
             )

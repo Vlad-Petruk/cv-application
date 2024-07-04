@@ -18,7 +18,7 @@ function App() {
   function addEducation(school, degree, startDate, endDate, location) {
     let newEducations = [...educations]
     newEducations.push({
-      key: uuidv4,
+      key: uuidv4(),
       school: school,
       degree: degree,
       startDate: startDate,
@@ -28,6 +28,11 @@ function App() {
     setEducations(newEducations)
   }
 
+  function deleteEducation(education) {
+    let newEducations = educations.filter((edu) => edu.key !== education.key);
+    setEducations(newEducations);
+  }
+
   function updateEducation(updatedEducation, school, degree, startDate, endDate, location) {
     let newEducations = educations.map(education =>
         education.key === updatedEducation.key 
@@ -35,6 +40,20 @@ function App() {
             : education
     );
     setEducations(newEducations);
+}
+
+function addExperience(company, posTitle, startDate, endDate, location, descr) {
+  let newExperiences = [...experiences]
+  newExperiences.push({
+    key: uuidv4(),
+    company: company,
+    posTitle: posTitle,
+    startDate: startDate,
+    endDate: endDate,
+    location: location,
+    descr: descr,
+  })
+  setExperiences(newExperiences)
 }
 
 function updateExperience(updatedExperience, company, posTitle, startDate, endDate, location, descr) {
@@ -68,7 +87,7 @@ function updateExperience(updatedExperience, company, posTitle, startDate, endDa
   return (
     <>
       <div className="form-section">
-        <FormMainSection name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} adress={adress} setAdress={setAdress} onClear={onClear} onLoad={onLoad} educations={educations} addEducation={addEducation} updateEducation={updateEducation} experiences={experiences} updateExperience={updateExperience}
+        <FormMainSection name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} adress={adress} setAdress={setAdress} onClear={onClear} onLoad={onLoad} educations={educations} addEducation={addEducation} updateEducation={updateEducation} deleteEducation={deleteEducation} experiences={experiences} addExperience={addExperience} updateExperience={updateExperience}
         />
       </div>
       <div className="cv-preview">
