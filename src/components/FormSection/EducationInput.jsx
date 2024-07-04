@@ -17,7 +17,6 @@ function InputBox ({handleClick, education, updateEducation}) {
             <Input type={'text'} id ={'location'} label={'Location'} value={education.location}onChange={(value) => updateEducation(education.school, education.degree, education.startDate, education.endDate, value)}/>
 
             <div className="buttons edu-btn">
-                <Button text={'Delete'} />
                 <Button text={'Save'} handleClick={handleClick}/>
             </div>
         </div>

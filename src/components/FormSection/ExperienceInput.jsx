@@ -19,7 +19,6 @@ function InputBox ({handleClick, experience, updateExperience}) {
             <Input type={'text'} id ={'description'} label={'Description'} value={experience.descr} onChange={(value) => {updateExperience(experience.company, experience.posTitle, experience.startDate, experience.endDate, experience.location, value)}}/>
 
             <div className="buttons edu-btn">
-                <Button text={'Delete'} />
                 <Button text={'Save'} handleClick={handleClick}/>
             </div>
         </div>

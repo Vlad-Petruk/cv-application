@@ -44,6 +44,10 @@
     padding: 0;
 }
 
+.edu-btn {
+    justify-content: center;
+}
+
 .edu-btn *{
     padding: 1rem;
     margin: .3rem;
