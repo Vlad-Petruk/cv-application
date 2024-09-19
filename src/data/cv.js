@@ -1,6 +1,6 @@
 const data = {
   personal_info: {
-    name: "Vlad Petruk",
+    name: "Alvaro Dessants",
     email: "alvarodesants@gmail.com",
     phone: "656413858",
     address: "Madrid, Spain",
